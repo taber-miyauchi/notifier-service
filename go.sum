@@ -1,4 +1,4 @@
-github.com/taber-miyauchi/notifier-core v0.1.0 h1:Fb03+WJz+ayVcuboTjxENFun+hGbnzCTcjhLYWblWtU=
-github.com/taber-miyauchi/notifier-core v0.1.0/go.mod h1:9JOhCCbLeq4ti8SKN28xp9jYMiNTy3KGfaMkdEg/sx0=
-github.com/taber-miyauchi/notifier-email v0.1.0 h1:OsqhoZaRMwfdwRrppsmTLyYNUtepluCVF5pAsbi/36A=
-github.com/taber-miyauchi/notifier-email v0.1.0/go.mod h1:6szrgaRZnS7FVriesc661l/MzL4gJrmCByGkDRc8g3Q=
+github.com/taber-miyauchi/notifier-core v0.2.0 h1:5l5Kuev8P/IhZglUZ7xlE5HqrGi0aY9izKh66l1f0h0=
+github.com/taber-miyauchi/notifier-core v0.2.0/go.mod h1:9JOhCCbLeq4ti8SKN28xp9jYMiNTy3KGfaMkdEg/sx0=
+github.com/taber-miyauchi/notifier-email v0.2.0 h1:oGqZ8czflngXtBfhu4PAVCKrpeXRK7rrJ3E3HP4grkE=
+github.com/taber-miyauchi/notifier-email v0.2.0/go.mod h1:4kmtku6ixMl2XaJMbs/uJcOEO3W1ncd2KYJEVZcbois=
