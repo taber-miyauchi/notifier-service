@@ -44,15 +44,27 @@ Open this repo in Sourcegraph and try:
 
 ### 1. Go to Definition (to notifier-core)
 
-- In `notifier-service/main.go`, click on `Notifier` (line 23) → **Go to Definition**
-- → Jumps to `Notifier` (line 7) interface in `notifier-core/notifier.go`
+Jump from an interface usage to its definition in the core library.
+
+- In `main.go`, click on `Notifier` (line 23) → **Go to Definition**
+- → Highlights `Notifier` (line 7) interface in `notifier-core/notifier.go`
+
+**Benefit:** Instantly understand the contract your service depends on—see the interface definition without switching repos or searching documentation.
 
 ### 2. Go to Definition (to notifier-email)
 
-- In `notifier-service/main.go`, click on `email.NewEmailNotifier` (line 13) → **Go to Definition**
-- → Jumps to `NewEmailNotifier` (line 18) function in `notifier-email/email.go`
+Navigate from a constructor call to its implementation in another repository.
+
+- In `main.go`, click on `NewEmailNotifier` (line 13) → **Go to Definition**
+- → Highlights `NewEmailNotifier` (line 18) function in `notifier-email/email.go`
+
+**Benefit:** Dive into the implementation details of your dependencies—debug issues or understand behavior without cloning and searching multiple repos.
 
 ### 3. Find Implementations (cross-repo)
 
-- In `notifier-service/main.go`, click on `Notifier` (line 23) → **Find Implementations**
-- → Shows `EmailNotifier` in `notifier-email/email.go`
+Discover all concrete implementations of an interface across repositories.
+
+- In `main.go`, click on `Notifier` (line 23) → **Find Implementations**
+- → Highlights `EmailNotifier` (line 11) struct in `notifier-email/email.go`
+
+**Benefit:** See all available implementations when working with dependency injection—critical for understanding which adapters exist and could be swapped in.
