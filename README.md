@@ -44,15 +44,15 @@ Open this repo in Sourcegraph and try:
 
 ### 1. Go to Definition (to notifier-core)
 
-- In `main.go`, click on `core.Notifier` (line 22) → **Go to Definition**
-- → Jumps to `Notifier` interface in `notifier-core/notifier.go`
+- In `notifier-service/main.go`, click on `Notifier` (line 23) → **Go to Definition**
+- → Jumps to `Notifier` (line 7) interface in `notifier-core/notifier.go`
 
 ### 2. Go to Definition (to notifier-email)
 
-- In `main.go`, click on `email.NewEmailNotifier` (line 12) → **Go to Definition**
-- → Jumps to `NewEmailNotifier` function in `notifier-email/email.go`
+- In `notifier-service/main.go`, click on `email.NewEmailNotifier` (line 13) → **Go to Definition**
+- → Jumps to `NewEmailNotifier` (line 18) function in `notifier-email/email.go`
 
 ### 3. Find Implementations (cross-repo)
 
-- In `main.go`, click on `core.Notifier` (line 22) → **Find Implementations**
+- In `notifier-service/main.go`, click on `Notifier` (line 23) → **Find Implementations**
 - → Shows `EmailNotifier` in `notifier-email/email.go`
