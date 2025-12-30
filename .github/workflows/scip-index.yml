@@ -1,0 +1,32 @@
+name: SCIP Index
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  scip-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Install scip-go
+        run: go install github.com/sourcegraph/scip-go/cmd/scip-go@latest
+
+      - name: Generate SCIP index
+        run: scip-go
+
+      - name: Upload SCIP index to Sourcegraph
+        run: |
+          curl -L https://sourcegraph.com/.api/src-cli/src_linux_amd64 -o /usr/local/bin/src
+          chmod +x /usr/local/bin/src
+          src code-intel upload -github-token=${{ secrets.GITHUB_TOKEN }}
+        env:
+          SRC_ENDPOINT: ${{ secrets.SRC_ENDPOINT }}
+          SRC_ACCESS_TOKEN: ${{ secrets.SRC_ACCESS_TOKEN }}
