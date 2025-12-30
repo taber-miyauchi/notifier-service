@@ -38,11 +38,21 @@ POST /
 - `github.com/sourcegraph-ce/notifier-core` - For `Notifier` interface and `Message` type
 - `github.com/sourcegraph-ce/notifier-email` - For `EmailNotifier` implementation
 
-## Precise Code Navigation Demo
+## Testing Precise Code Navigation
 
-This repo is the **consumer** that ties everything together. Try these:
+Open this repo in Sourcegraph and try:
 
-1. **"Go to Definition"** on `core.Notifier` → jumps to `notifier-core/notifier.go`
-2. **"Go to Definition"** on `core.NewMessage` → jumps to `notifier-core/message.go`
-3. **"Go to Definition"** on `email.NewEmailNotifier` → jumps to `notifier-email/email.go`
-4. **"Find References"** on `Message` in `notifier-core` → shows usage in all 3 repos
+### 1. Go to Definition (to notifier-core)
+
+- In `main.go`, click on `core.Notifier` (line 22) → **Go to Definition**
+- → Jumps to `Notifier` interface in `notifier-core/notifier.go`
+
+### 2. Go to Definition (to notifier-email)
+
+- In `main.go`, click on `email.NewEmailNotifier` (line 12) → **Go to Definition**
+- → Jumps to `NewEmailNotifier` function in `notifier-email/email.go`
+
+### 3. Find Implementations (cross-repo)
+
+- In `main.go`, click on `core.Notifier` (line 22) → **Find Implementations**
+- → Shows `EmailNotifier` in `notifier-email/email.go`
